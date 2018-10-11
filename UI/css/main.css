@@ -75,7 +75,6 @@ h4{
 /*style the side navbar*/
 .sidenav{
 background-color:#4371a2;
-height: 100vh;
 margin-top: 57px;
 left: 2px;
 top: 0;
@@ -83,6 +82,7 @@ width:15%;
 position: fixed;
 float: left;
 border: 1px solid #4371a2;
+height: 88vh;
 }
 .sidenav a,.dropdown-btn {
 text-decoration: none;
@@ -167,4 +167,14 @@ td a{
   border-radius: 10px;
   width: 70%;
   padding: 5px;
+}
+footer{
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#4371a2 ;
+    color: white;
+    text-align: center;
+
 }
