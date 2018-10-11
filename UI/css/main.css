@@ -108,3 +108,63 @@ width: 100%;
 .profile{
   float:right;
 }
+/* style for toprow of pages */
+.head{
+  width:30%;
+  float:left;
+}
+.topform{
+  width:70%;
+  float:right;
+}
+/* style for the side body adjusent to sidenav */
+.sidebody{
+  width: 85%;
+  height: 100vh;
+  float: right;
+
+}
+/* style for row with search box */
+.toprow{
+  padding-left: 50px;
+  border-bottom: 1px solid #e3e3e0;
+  height :50px;
+
+  }
+.toprow input{
+  border-radius: 20px;
+  width:200px;
+  height:35px;
+  margin-left: 10px;
+}
+/* style title for cart */
+.carttitle{
+margin-left: 2%;
+}
+/* style for table */
+table{
+width: 98%;
+border-collapse: collapse;
+margin-left: 1%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th{
+  background-color:#4371a2;
+  color: white;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+td a{
+  text-decoration: none;
+  display: block;
+  color: white;
+  background-color: #4371a2;
+  border-radius: 10px;
+  width: 70%;
+  padding: 5px;
+}
