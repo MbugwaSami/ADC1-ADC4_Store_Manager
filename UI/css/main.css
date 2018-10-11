@@ -99,3 +99,12 @@ width: 100%;
   color:#4371a2 ;
 
 }
+/* style dropdown menu */
+.dropdown-container {
+    display: none;
+    background-color: black;
+    padding-left: 8px;
+}
+.profile{
+  float:right;
+}
