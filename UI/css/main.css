@@ -72,3 +72,30 @@ label,ul,li{
 h4{
   color: black:
 }
+/*style the side navbar*/
+.sidenav{
+background-color:#4371a2;
+height: 100vh;
+margin-top: 57px;
+left: 2px;
+top: 0;
+width:15%;
+position: fixed;
+float: left;
+border: 1px solid #4371a2;
+}
+.sidenav a,.dropdown-btn {
+text-decoration: none;
+display: block;
+padding: 15px;
+color: white;
+background: none;
+width: 100%;
+ border: none;
+ text-align: left;
+}
+.sidenav a:hover,.dropdown-btn:hover{
+  background-color: white;
+  color:#4371a2 ;
+
+}
