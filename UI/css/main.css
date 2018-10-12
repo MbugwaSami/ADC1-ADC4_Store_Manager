@@ -97,6 +97,11 @@ width: 100%;
 }
 .profile{
   float:right;
+
+}
+.profile a{
+  font-size: 20px;
+  padding:5px;
 }
 /* style for toprow of pages */
 .head{
@@ -182,13 +187,7 @@ width: 50%;
 padding-top: 10px;
 float: left;
 }
-.leftdetails input,label,h4{
-  width: 50%;
-  margin-left: 10;
-  margin-bottom: 5px;
-  font-size: 20px;
 
-}
 /* style for sections in left */
 .rightdetails{
   border-radius: 20px;
@@ -299,7 +298,7 @@ img{
 }
 .pic{
 
-  
+
   width: 40%;
   padding-top: 1px;
   float: left;
