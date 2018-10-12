@@ -48,7 +48,7 @@ display: inline-block;
 }
 /* style for all  buttons */
 input[type="submit"],input[type="button"]{
-  width: 30px;
+  width: 50%;
   background-color: #4371a2;
   border-radius: 20px;
   margin-top: 10px;
