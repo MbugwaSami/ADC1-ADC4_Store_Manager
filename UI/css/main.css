@@ -1,0 +1,74 @@
+/* style for body */
+body{
+
+}
+/* this style is added to all elements */
+*{
+  box-sizing: border-box;
+}
+/* style for nav */
+.navbar{
+  background-color: #4371a2;
+  height: 50px;
+  color: white;
+  overflow: hidden;
+  top: 0;
+  left: 2px;
+  position: fixed;
+  width: 100%;
+
+}
+/* style for the navbar menus */
+.navbar a{
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+  text-decoration: none;
+
+}
+/* style for body */
+.main{
+  padding: 15px;
+  margin-top: 30px;
+}
+/* style for card */
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  margin-top: 100px;
+  border-radius: 10px;
+  width: 40%;
+}
+/* style for login card */
+
+.card-title{
+  margin-top: 0px;
+}
+/* style all inputs */
+input, label{
+margin-left: 100px;
+height:30px;
+width: 300px;
+margin-bottom: 10px;
+display: inline-block;
+
+}
+/* style for all  buttons */
+input[type="submit"],input[type="button"]{
+  width: 100px;
+  background-color: #1e46f3;
+  border-radius: 20px;
+  margin-top: 10px;
+  color: white;
+}
+/* style for text color */
+label,ul,li{
+  color: #1e46f3;
+  list-style-type: none;
+}
+h4{
+  color: black:
+}
