@@ -114,7 +114,7 @@ width: 100%;
   float:left;
 }
 .topform{
-  
+
   float:right;
 }
 /* style for the side body adjusent to sidenav */
@@ -169,7 +169,7 @@ td a{
   padding: 5px;
 }
 .itemcell{
-  color:blue;
+  color:white;
 }
 footer{
   position: fixed;
@@ -182,14 +182,14 @@ footer{
 
 }
 /* style for sections in left*/
-.sidedetails{
+.leftdetails{
 border: 1px solid #dddddd;
 margin:10px;
 width: 50%;
 padding-top: 10px;
 float: left;
 }
-.sidedetails input,label,h4{
+.leftdetails input,label,h4{
   width: 50%;
   margin-left: 10%;
   margin-bottom: 5px;
@@ -218,7 +218,7 @@ float: left;
 }
 .centereddetails input,label,h4{
   width: 50%;
-  margin-left: 10%;
+  margin-left: 25%;
   margin-bottom: 5px;
   font-size: 20px;
 
@@ -227,14 +227,17 @@ float: left;
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    padding: 3px;
+    background-color: #4371a2;
+    border-radius: 10px;
+    width: 50%;
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
-    color: #fff;
+    color: white;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
