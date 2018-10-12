@@ -285,3 +285,34 @@ float: left;
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.topprofile{
+  padding-left: 50px;
+  border: 1px solid #e3e3e0;
+  height :35vh;
+  margin-top: 1%;
+}
+img{
+  height: 180px;
+  width: 180px;
+  left: 0;
+  border-radius: 50%;
+}
+.pic{
+
+  
+  width: 40%;
+  padding-top: 1px;
+  float: left;
+  font-size:30px;
+}
+.topdetails{
+
+  width: 40%;
+  padding-top: 10px;
+  float: left;
+  font-size:30px;
+}
+.lowprofile{
+  height :65vh;
+  margin-top: 1%;
+}
