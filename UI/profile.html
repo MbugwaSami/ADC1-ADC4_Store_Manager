@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<!-- body start here -->
+<body>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Quick Wear Store</a>
+      <div class="profile">
+        <a href="profile.html">Attendant</a>
+      </div>
+    </nav>
+  </header>
+  <!-- main body start here -->
+  <div class="main">
+    <div class="row">
+        <div class="sidenav">
+          <!-- page sidenav -->
+          <a href="Attendant.html">Home</a>
+          <a href="attendantSales.html">View Sales</a>
+          <button class="dropdown-btn">Items
+             <i></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="Items.html">All Items</a>
+            <a href="IndividualItem.html">Individual Item</a>
+            </div>
+          <button class="dropdown-btn">Category
+           <i></i>
+        </button>
+       <div class="dropdown-container">
+         <a href="#">Clothes</a>
+         <a href="#">Shoes</a>
+         <a href="#">Jewel</a>
+     </div>
+        </div>
+        <div class="sidebody">
+      <div class="row">
+        <!-- row for search and add to cart button  -->
+    <div class="toprow">
+      <form>
+        <input type="text" name="Searchbox" value="" placeholder="Search Item">
+        <input type="button" name="addbutton" value="Add to cart">
+      </form>
+    </div>
+    <!-- div for table row -->
+      <div class="middlerow">
+        <!-- table start here -->
+      <div class="table">
+      <table>
+        <thead>
+            <th>No</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Trouser</td>
+          <td>size 32 khaki</td>
+          <td>2</td>
+          <td>1000</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Watch</td>
+          <td>Google Pixel</td>
+          <td>1</td>
+          <td>1000</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Trouser</td>
+          <td>size 32 khaki</td>
+          <td>2</td>
+          <td>1000</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Trouser</td>
+          <td>size 32 khaki</td>
+          <td>2</td>
+          <td>1000</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+      </div>
+      <div class="bottomrow">
+
+        <div class="leftdetails">
+          <h4>Cart Details</h4>
+          <hr>
+          <form class="" action="" method="post">
+            <label for="vatAmount">Vatable Amount</label><br>
+            <input type="text" name="vatAmount" value="6500"><br>
+            <label for="discount">Discount</label><br>
+            <input type="text" name="discount" value="0.0"></br>
+            <label for="tax">Tax</label><br>
+            <input type="text" name="tax" value="500"><br>
+            <label for="total">Total</label><br>
+            <input type="text" name="total" value="7000"></br>
+
+          </form>
+        </div>
+        <div class="rightdetails">
+          <input type="button" name="" value="Make Sale">
+          <h4>Attendand Details</h4>
+          <hr>
+          <ul>
+            <li>Name:Sammy Njau</li>
+            <li>Id &nbsp  &nbsp  &nbsp:1</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+  </div>
+  <footer>
+    @copyright:samimbugwa@gmail.com
+  </footer>
+    <script src="js/dropdown.js" type="text/javascript"></script>
+</body>
+</html>
