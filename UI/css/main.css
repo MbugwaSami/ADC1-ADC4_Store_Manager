@@ -1,6 +1,6 @@
 /* style for body */
 body{
-
+background-color: #fbfdf1;
 }
 /* this style is added to all elements */
 *{
@@ -183,6 +183,9 @@ footer{
 }
 /* style for sections in left*/
 .leftdetails{
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 border: 1px solid #dddddd;
 margin:10px;
 width: 50%;
@@ -191,13 +194,16 @@ float: left;
 }
 .leftdetails input,label,h4{
   width: 50%;
-  margin-left: 10%;
+  margin-left: 10;
   margin-bottom: 5px;
   font-size: 20px;
 
 }
 /* style for sections in left */
 .rightdetails{
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
   border: 1px solid #dddddd;
   margin:10px;
   width: 40%;
@@ -208,6 +214,9 @@ float: left;
 }
 /* style for sections at center */
 .centereddetails{
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
   border: 1px solid #dddddd;
   margin-left: auto;
   margin-right: auto;
@@ -216,11 +225,12 @@ float: left;
   padding-top: 10px;
   margin-top: 5px;
 }
-.centereddetails input,label,h4{
+.centereddetails,.leftdetails input,label,h4{
   width: 50%;
   margin-left: 25%;
   margin-bottom: 5px;
   font-size: 20px;
+
 
 }
 /* style for items hover */
