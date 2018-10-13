@@ -53,6 +53,8 @@ input[type="submit"],input[type="button"]{
   border-radius: 20px;
   margin-top: 10px;
   color: white;
+  }
+
 }
 /* style for text color */
 label,ul,li{
@@ -107,7 +109,7 @@ width: 100%;
 .head{
   width:30%;
   float:left;
-}
+}0
 .topform{
 
   float:right;
@@ -166,6 +168,7 @@ td a{
 .itemcell{
   color:white;
 }
+
 footer{
   position: fixed;
     left: 0;
@@ -240,19 +243,20 @@ float: left;
   padding-top: 10px;
 
 }
-./* style for card */
-.card,.centereddetails,.leftdetails,.rightdetails input,label,h4,p,a
-{
+
+.card button{
   width: 50%;
+  background-color: #4371a2;
   margin-left: 25%;
-  margin-bottom: 5px;
-  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  height: 30px;
 
 }
-.card a{
+.toadmin{
+  margin-top: 100px;
+  margin-left: 25%;
   color: #4371a2;
-  margin-left: 40%;
-  text-decoration: none;
 }
 /* style for items hover */
 .tooltip {
