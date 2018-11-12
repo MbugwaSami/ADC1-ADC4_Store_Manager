@@ -185,10 +185,9 @@ footer{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 border: 1px solid #dddddd;
-margin:10px;
-width: 50%;
+width: 40%;
 padding-top: 10px;
-float: left;
+float: right;
 }
 
 /* style for sections in left */
@@ -200,7 +199,7 @@ float: left;
   margin:10px;
   width: 40%;
   padding-top: 10px;
-  float: left;
+  float: right;
   font-size:30px;
 
 }
