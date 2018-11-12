@@ -120,16 +120,49 @@ get_one_product(){
       .then(function(response){return response.json()})
       .then(function(data){
 
-        let product = data;
-        document.getElementById("product_name").value = product.product_name;
-        document.getElementById("description").value = product.description;
-        document.getElementById("price").value = product.price;
-        document.getElementById("stock").value = product.stock;
-        document.getElementById("minStock").value = product.min_stock;
-        document.getElementById("category").value = product.category;
-        console.log(product.min_stock)
+         let product = data.product;
+        if(data.message === "product found"){
+
+
+          document.getElementById("product_name").value = product.product_name;
+          document.getElementById("description").value = product.description;
+          document.getElementById("price").value = product.price;
+          document.getElementById("stock").value = product.stock;
+          document.getElementById("minStock").value = product.min_stock;
+          document.getElementById("category").value = product.category;
+          console.log(product.min_stock)
+        }
+        else {
+          document.getElementById("erroMessage").innerHTML = data.message;
+        }
       });
 }
+
+delete_product(){
+
+  let product_id = document.getElementById('Searchbox').value
+  // url for endpoint
+  let url = "http://127.0.0.1:5000/api/v2/products/"+product_id
+
+  const token = localStorage.getItem('token');
+  const access_token = "Bearer " + token
+
+  // define data to be used in options section
+  let fetchData = {
+    method: 'DELETE',
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization" : access_token
+    }
+  };
+
+      fetch(url, fetchData)
+      .then(function(response){return response.json()})
+      .then(function(response){
+        document.getElementById("erroMessage").innerHTML = response.message;
+      });
+}
+
 
   }
 
@@ -151,4 +184,11 @@ get_one_product(){
     e.preventDefault();
     product = new Products();
     product.get_one_product();
+  });
+
+  let delete_product = document.getElementById('delete_product');
+  delete_product.addEventListener('click', function getTarget(e){
+    e.preventDefault();
+    product = new Products();
+    product.delete_product();
   });
