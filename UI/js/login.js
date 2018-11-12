@@ -1,21 +1,19 @@
-class Auths {
+class Login {
 
-  constructor(email, names, role, password) {
-    this.email = email
-    this.names = names
-    this.role = role
+  constructor(email,  password) {
+    this.email = email,
     this.password = password
 
 
   }
 
 
-  // this function is called when the litsener responds to submit eve
+  // this function is called when the litsener responds to login submit event
   login(){
 
 
     // url for endpoint
-    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/users/login"
+    let url = "http://127.0.0.1:5000/api/v2/users/login"
 
     // get login data from ui
     let data = {
@@ -64,16 +62,17 @@ class Auths {
         document.getElementById("erroMessage").innerHTML = response.message;
       }
 
-    })
+    });
   }
-
 }
+
+
 
 let login = document.getElementById('login');
 login.addEventListener('submit', function getTarget(e){
-  e.preventDefault()
+  e.preventDefault();
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
-  auth = new Auths(email, password);
+  auth = new Login(email, password);
   auth.login();
-})
+});
