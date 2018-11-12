@@ -10,12 +10,12 @@ class Auths {
   }
 
 
-  // this function is called when the litsener responds to submit eve
+  // this function is called when the litsener responds to login submit event
   login(){
 
 
     // url for endpoint
-    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/users/login"
+    let url = "http://127.0.0.1:5000/api/v2/users/login"
 
     // get login data from ui
     let data = {
@@ -67,13 +67,63 @@ class Auths {
     })
   }
 
+  add_user(){
+
+        // url for endpoint
+        let url = "http://127.0.0.1:5000/api/v2/users/login"
+
+        // get sign up data from ui
+        let data = {
+          email : this.email,
+          names : this.names,
+          role : this.role,
+          password : this.password
+        };
+
+        // get the access_token
+        const token = localStorage.getItem('token');
+        const access_token = "Bearer " + token
+
+        // define data to be used in options section
+        let fetchData = {
+          method: 'POST',
+          headers: {
+            "Content-Type" : "application/json",
+            "Authorization" : access_token
+          },
+          body:JSON.stringify(data)
+
+        };
+
+
+        fetch(url, fetchData)
+        .then(function(response) {return response.json()})
+        .then(function(response){
+
+          if (response.status === 201){
+            alert("User created succesfully")
+          }
+
+        })
+
+  }
 }
+
+
 
 let login = document.getElementById('login');
 login.addEventListener('submit', function getTarget(e){
-  e.preventDefault()
+  e.preventDefault();
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
   auth = new Auths(email, password);
   auth.login();
+})
+
+let create_user = document.getElementById('create_user');
+create_user.addEventListener('click', function getTarget(e){
+  e.preventDefault();
+  auth = new Auths("email", "password");
+  auth.login();
+
 })
