@@ -42,6 +42,7 @@ class Login {
       localStorage.setItem('token',response.token);
       localStorage.setItem('role',response.role);
       localStorage.setItem('names',response.names);
+      localStorage.setItem('user_id',response.user_id);
 
       // login the user
       if(response.message === "wellcome "+response.names +", "+"you are loged in as "+response.role){
