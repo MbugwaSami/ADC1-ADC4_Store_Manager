@@ -55,7 +55,44 @@ class Sales {
         });
   }
 
+  // method to post a sale
+      make_sale(){
 
+            // url for endpoint
+            let url = "http://127.0.0.1:5000/api/v2/sales"
+
+            // get the access_token
+            const token = localStorage.getItem('token');
+            const access_token = "Bearer " + token
+
+            if (token === null){
+              window.location.href = '../index.html';
+            }
+
+            // define data to be used in options section
+            let fetchData = {
+              method: 'POST',
+              headers: {
+                "Content-Type" : "application/json",
+                "Authorization" : access_token
+              },
+
+            };
+
+
+            fetch(url, fetchData)
+            .then(function(response) {return response.json()})
+            .then(function(response){
+            if (response.message === "your sale was succesful"){
+              document.getElementById("erroMessage").innerHTML = response.message;
+              document.getElementById('cart_details').innerHTML = ""
+            }
+            else {
+              document.getElementById("erroMessage").innerHTML = response.message;
+            }
+            });
+
+      }
 
 }
 
