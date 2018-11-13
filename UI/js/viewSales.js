@@ -1,6 +1,6 @@
 class  ViewSales {
-  constructor() {
-
+  constructor(user_id) {
+       this.user_id = user_id
   }
 
   get_user_sales(){
@@ -9,7 +9,7 @@ class  ViewSales {
 
     let user_id = localStorage.getItem('user_id')
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales/"+user_id
+    let url = "http://127.0.0.1:5000/api/v2/sales/"+this.user_id
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -86,11 +86,23 @@ class  ViewSales {
 
 
 }
-sales = new ViewSales()
+
 if (localStorage.getItem('role') === "admin"){
+  sales = new ViewSales()
   window.onload = sales.get_all_user_sales();
 }
 
 else {
+  let user_id = localStorage.getItem('user_id')
+  sales = new ViewSales(user_id)
   window.onload = sales.get_user_sales();
 }
+
+let search_sales = document.getElementById('search_sales');
+search_sales.addEventListener('click', function getTarget(e){
+  e.preventDefault();
+  document.getElementById('sales_details').innerHTML = ""
+  let user_id = document.getElementById('search_box').value
+  sales = new ViewSales(user_id);
+  sales.get_user_sales();
+});
