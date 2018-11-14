@@ -12,7 +12,7 @@ class Users {
   add_user(){
 
         // url for endpoint
-        let url = "http://127.0.0.1:5000/api/v2/users"
+        let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/users"
 
         // get sign up data from ui
         let data = {

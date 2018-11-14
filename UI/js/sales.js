@@ -11,7 +11,7 @@ class Sales {
 
     let quantity = document.getElementById('quantity').value
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales/"+product_id+"/"+quantity
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales/"+product_id+"/"+quantity
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -31,6 +31,9 @@ class Sales {
         .then(function(data){
          if(data.message === "This are the items on your Cart"){
            document.getElementById("erroMessage").innerHTML ="";
+           cartTable.innerHTML = "";
+           document.getElementById("total").value =data.total;
+           document.getElementById("product_count").value =data.product_count;
            let sales = data.buyers_cart;
            return sales.map(function(sale){
              cartTable.innerHTML +=`
@@ -59,7 +62,7 @@ class Sales {
       make_sale(){
 
             // url for endpoint
-            let url = "http://127.0.0.1:5000/api/v2/sales"
+            let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales"
 
             // get the access_token
             const token = localStorage.getItem('token');
@@ -86,6 +89,8 @@ class Sales {
             if (response.message === "your sale was succesful"){
               document.getElementById("erroMessage").innerHTML = response.message;
               document.getElementById('cart_details').innerHTML = ""
+              document.getElementById("total").value ="0.0";
+              document.getElementById("product_count").value =0;
             }
             else {
               document.getElementById("erroMessage").innerHTML = response.message;

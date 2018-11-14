@@ -9,7 +9,7 @@ class  ViewSales {
 
     let user_id = localStorage.getItem('user_id')
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales/"+this.user_id
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales/"+this.user_id
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -27,19 +27,27 @@ class  ViewSales {
         .then(function(response){return response.json()})
         .then(function(data){
 
-          let sales = data.sales;
+          if (data.message === "This are your sales"){
+            let sales = data.sales;
 
-          return sales.map(function(sale){
-            salesTable.innerHTML +=`
-            <tr>
+            return sales.map(function(sale){
+              salesTable.innerHTML +=`
+              <tr>
 
-            <td>${sales.indexOf(sale)+1}</td>
-            <td>${sale.product_name}</td>
-            <td>${sale.quantity}</td>
-            <td>${sale.subtotal}</td>
+              <td>${sales.indexOf(sale)+1}</td>
+              <td>${sale.sale_id}</td>
+              <td>${sale.product_name}</td>
+              <td>${sale.quantity}</td>
+              <td>${sale.subtotal}</td>
 
-            </tr>`;
-          });
+              </tr>`;
+            });
+
+          }
+          else {
+            document.getElementById("erroMessage").innerHTML = data.message;
+          }
+
 
         });
   }
@@ -49,7 +57,7 @@ class  ViewSales {
     let salesTable = document.getElementById('sales_details')
 
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales"
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales"
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -66,21 +74,26 @@ class  ViewSales {
         fetch(url, fetchData)
         .then(function(response){return response.json()})
         .then(function(data){
+          if (data.message === "This are all the sales"){
+            let sales = data.sales;
+            return sales.map(function(sale){
+              salesTable.innerHTML +=`
+              <tr>
 
-          let sales = data;
-          return sales.map(function(sale){
-            salesTable.innerHTML +=`
-            <tr>
+              <td>${sales.indexOf(sale)+1}</td>
+              <td>${sale.sale_id}</td>
+              <td>${sale.product_name}</td>
+              <td>${sale.quantity}</td>
+              <td>${sale.subtotal}</td>
+              <td>${sale.user_id}</td>
 
-            <td>${sales.indexOf(sale)+1}</td>
-            <td>${sale.product_name}</td>
-            <td>${sale.quantity}</td>
-            <td>${sale.subtotal}</td>
-            <td>${sale.user_id}</td>
+              </tr>`;
+            });
 
-            </tr>`;
-          });
-
+          }
+          else {
+            document.getElementById("erroMessage").innerHTML = data.message;
+          }
         });
   }
 

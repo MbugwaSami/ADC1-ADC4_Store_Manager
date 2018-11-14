@@ -8,7 +8,7 @@ class Products {
     let productsTable = document.getElementById('product_details')
 
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/products"
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products"
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
