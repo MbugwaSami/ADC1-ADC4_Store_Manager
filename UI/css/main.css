@@ -184,9 +184,9 @@ footer{
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  margin:10px;
 border: 1px solid #dddddd;
-margin:10px;
-width: 50%;
+width: 40%;
 padding-top: 10px;
 float: left;
 }
@@ -202,6 +202,11 @@ float: left;
   padding-top: 10px;
   float: left;
   font-size:30px;
+
+}
+
+.rightdetails li{
+  list-style-type: none;
 
 }
 /* style for sections at center */
@@ -319,3 +324,30 @@ img{
   height :65vh;
   margin-top: 1%;
 }
+
+#erroMessage{
+  color: red;
+}
+
+/* make rows and coulumns */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
