@@ -51,7 +51,7 @@ class Products {
       if (response.message === "product succesfuly added"){
         document.getElementById("erroMessage").innerHTML = response.message;
         window.alert("Product succesfuly added, redirecting to all products page")
-        window.location.href = 'items.html';
+        window.location.href = '../Admin/items.html';
       }
 
       else {
