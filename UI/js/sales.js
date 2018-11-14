@@ -31,6 +31,9 @@ class Sales {
         .then(function(data){
          if(data.message === "This are the items on your Cart"){
            document.getElementById("erroMessage").innerHTML ="";
+           cartTable.innerHTML = "";
+           document.getElementById("total").value =data.total;
+           document.getElementById("product_count").value =data.product_count;
            let sales = data.buyers_cart;
            return sales.map(function(sale){
              cartTable.innerHTML +=`
@@ -86,6 +89,8 @@ class Sales {
             if (response.message === "your sale was succesful"){
               document.getElementById("erroMessage").innerHTML = response.message;
               document.getElementById('cart_details').innerHTML = ""
+              document.getElementById("total").value ="0.0";
+              document.getElementById("product_count").value =0;
             }
             else {
               document.getElementById("erroMessage").innerHTML = response.message;

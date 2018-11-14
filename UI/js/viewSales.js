@@ -27,19 +27,27 @@ class  ViewSales {
         .then(function(response){return response.json()})
         .then(function(data){
 
-          let sales = data.sales;
+          if (data.message === "This are your sales"){
+            let sales = data.sales;
 
-          return sales.map(function(sale){
-            salesTable.innerHTML +=`
-            <tr>
+            return sales.map(function(sale){
+              salesTable.innerHTML +=`
+              <tr>
 
-            <td>${sales.indexOf(sale)+1}</td>
-            <td>${sale.product_name}</td>
-            <td>${sale.quantity}</td>
-            <td>${sale.subtotal}</td>
+              <td>${sales.indexOf(sale)+1}</td>
+              <td>${sale.sale_id}</td>
+              <td>${sale.product_name}</td>
+              <td>${sale.quantity}</td>
+              <td>${sale.subtotal}</td>
 
-            </tr>`;
-          });
+              </tr>`;
+            });
+
+          }
+          else {
+            document.getElementById("erroMessage").innerHTML = data.message;
+          }
+
 
         });
   }
@@ -66,21 +74,26 @@ class  ViewSales {
         fetch(url, fetchData)
         .then(function(response){return response.json()})
         .then(function(data){
+          if (data.message === "This are all the sales"){
+            let sales = data.sales;
+            return sales.map(function(sale){
+              salesTable.innerHTML +=`
+              <tr>
 
-          let sales = data;
-          return sales.map(function(sale){
-            salesTable.innerHTML +=`
-            <tr>
+              <td>${sales.indexOf(sale)+1}</td>
+              <td>${sale.sale_id}</td>
+              <td>${sale.product_name}</td>
+              <td>${sale.quantity}</td>
+              <td>${sale.subtotal}</td>
+              <td>${sale.user_id}</td>
 
-            <td>${sales.indexOf(sale)+1}</td>
-            <td>${sale.product_name}</td>
-            <td>${sale.quantity}</td>
-            <td>${sale.subtotal}</td>
-            <td>${sale.user_id}</td>
+              </tr>`;
+            });
 
-            </tr>`;
-          });
-
+          }
+          else {
+            document.getElementById("erroMessage").innerHTML = data.message;
+          }
         });
   }
 

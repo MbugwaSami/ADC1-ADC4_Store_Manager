@@ -324,3 +324,7 @@ img{
   height :65vh;
   margin-top: 1%;
 }
+
+#erroMessage{
+  color: red;
+}
