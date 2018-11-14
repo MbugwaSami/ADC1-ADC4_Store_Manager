@@ -9,7 +9,7 @@ class  ViewSales {
 
     let user_id = localStorage.getItem('user_id')
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales/"+this.user_id
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales/"+this.user_id
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -57,7 +57,7 @@ class  ViewSales {
     let salesTable = document.getElementById('sales_details')
 
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales"
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales"
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token

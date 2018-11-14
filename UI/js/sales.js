@@ -11,7 +11,7 @@ class Sales {
 
     let quantity = document.getElementById('quantity').value
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/sales/"+product_id+"/"+quantity
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales/"+product_id+"/"+quantity
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -62,7 +62,7 @@ class Sales {
       make_sale(){
 
             // url for endpoint
-            let url = "http://127.0.0.1:5000/api/v2/sales"
+            let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/sales"
 
             // get the access_token
             const token = localStorage.getItem('token');

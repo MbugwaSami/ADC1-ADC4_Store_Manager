@@ -11,7 +11,7 @@ class Products {
   add_product(){
 
     // url for endpoint
-    let url = "http://127.0.0.1:5000/api/v2/products"
+    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products"
 
     // get sign up data from ui
     let data = {
@@ -67,7 +67,7 @@ get_one_product(){
 
   let product_id = document.getElementById('Searchbox').value
   // url for endpoint
-  let url = "http://127.0.0.1:5000/api/v2/products/"+product_id
+  let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products/"+product_id
 
   const token = localStorage.getItem('token');
   const access_token = "Bearer " + token
@@ -101,7 +101,7 @@ get_one_product(){
 
   let product_id = document.getElementById('Searchbox').value
   // url for endpoint
-  let url = "http://127.0.0.1:5000/api/v2/products/"+product_id
+  let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products/"+product_id
 
   const token = localStorage.getItem('token');
   const access_token = "Bearer " + token
@@ -143,7 +143,7 @@ delete_product(){
 
   let product_id = document.getElementById('Searchbox').value
   // url for endpoint
-  let url = "http://127.0.0.1:5000/api/v2/products/"+product_id
+  let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products/"+product_id
 
   const token = localStorage.getItem('token');
   const access_token = "Bearer " + token
@@ -168,7 +168,7 @@ delete_product(){
 update_product(){
   let product_id = document.getElementById('Searchbox').value
   // url for endpoint
-  let url = "http://127.0.0.1:5000/api/v2/products/"+product_id
+  let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products/"+product_id
 
   // get sign up data from ui
   let data = {
