@@ -40,7 +40,13 @@
         </div>
         <div class="sidebody">
             <div class="toprow">
-                <h4>Available Items</h4>
+              <div class="toprow">
+                <form>
+                  <input type="text" name="Searchbox" value="" id="product_name" placeholder="Product name">
+                  <input type="button" name="search_product" value="search product" id="search_product">
+                </form>
+              </div>
+
             </div>
             <div class="middlerow">
               <table>
@@ -53,11 +59,11 @@
                     <th>Available Stock</th>
                     <th>Minimum Stock</th>
                     <th>Category</th>
-                    <th>Action</th>
                 </thead>
               <tbody id="product_details">
               </tbody>
               </table>
+              <p id="erroMessage"></p
             </div>
           </div>
       </div>
