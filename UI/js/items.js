@@ -8,7 +8,7 @@ class Products {
     let productsTable = document.getElementById('product_details')
 
     // url for endpoint
-    let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/products"
+    let url = "http://127.0.0.1:5000/api/v2/products"
 
     const token = localStorage.getItem('token');
     const access_token = "Bearer " + token
@@ -27,6 +27,7 @@ class Products {
         .then(function(data){
 
           let products = data.products;
+          let button = document.createElement('button')
           return products.map(function(product){
             productsTable.innerHTML +=`
             <tr>
@@ -37,9 +38,11 @@ class Products {
             <td>${product.description}</td>
             <td>${product.price}</td>
             <td>${product.stock}</td>
-            <td>${product.min_stock}</td>
+            <td>${product.min_stock}</td*kj4 k>
             <td>${product.category}</td>
             </tr>`;
+
+
           });
 
         });

@@ -11,8 +11,13 @@ class Users {
 
   add_user(){
 
+    const token = localStorage.getItem('token');
+    const access_token = "Bearer " + token
+    if (token === null){
+      window.location.href = '../index.html';
+    }
         // url for endpoint
-        let url = "https://adc3-store-manager-api.herokuapp.com/api/v2/users"
+        let url = "http://127.0.0.1:5000/api/v2/users"
 
         // get sign up data from ui
         let data = {
@@ -22,13 +27,6 @@ class Users {
           password : this.password
         };
 
-        // get the access_token
-        const token = localStorage.getItem('token');
-        const access_token = "Bearer " + token
-
-        if (token === null){
-          window.location.href = '../index.html';
-        }
 
         // define data to be used in options section
         let fetchData = {
